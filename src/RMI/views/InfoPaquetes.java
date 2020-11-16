@@ -9,12 +9,12 @@ package RMI.views;
  *
  * @author nata_
  */
-public class SolicitudEnvio extends javax.swing.JPanel {
+public class InfoPaquetes extends javax.swing.JPanel {
 
     /**
-     * Creates new form Envio
+     * Creates new form InfoPaquetes
      */
-    public SolicitudEnvio() {
+    public InfoPaquetes() {
         initComponents();
     }
 
@@ -31,11 +31,11 @@ public class SolicitudEnvio extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 747, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 508, Short.MAX_VALUE)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
