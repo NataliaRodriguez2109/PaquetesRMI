@@ -143,40 +143,11 @@ public class SolicitudEnvio extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String ciudad = jComboBox2.getSelectedItem().toString();
-        double peso = 0;
-        if (ciudad.equals("")) {
-            JOptionPane.showMessageDialog(null, "Hay Campos vacios");
-            return;
-        }
-
-        try {
-            peso = Double.parseDouble(jTextField1.getText());
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, "El campo peso no es valido");
-            return;
-        }
-
-        Ubicacion ubicacion = null;
-
-        for (Ciudad c : this.ciudades) {
-            if(c.getNombre().equals(ciudad)){
-                ubicacion = c.getUbicacion();
-                break;
-            }
-        }
-
-        this.clienteBodega.solicitarEnvioPaquetes(ubicacion, peso);
-        this.dispose();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        String nombreCiudad = jComboBox1.getSelectedItem().toString();
-        jComboBox2.removeAllItems();
-        this.ciudades = this.clienteRecepcion.obtenerCiudades(nombreCiudad);
-        for (Ciudad ciudad : this.ciudades) {
-            jComboBox2.addItem(ciudad.getNombre());
-        }
+        
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
 

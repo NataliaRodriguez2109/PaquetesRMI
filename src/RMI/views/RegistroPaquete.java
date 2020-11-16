@@ -170,47 +170,15 @@ public class RegistroPaquete extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        String nombreCiudad = jComboBox1.getSelectedItem().toString();
-        jComboBox2.removeAllItems();
-        for (Ciudad ciudad : this.clienteRecepcion.obtenerCiudades(nombreCiudad)) {
-            jComboBox2.addItem(ciudad.getNombre());
-        }
+       
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        String nombreCiudad = jComboBox3.getSelectedItem().toString();
-        jComboBox4.removeAllItems();
-        for (Ciudad ciudad : this.clienteRecepcion.obtenerCiudades(nombreCiudad)) {
-            jComboBox4.addItem(ciudad.getNombre());
-        }
+        
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String nombreEmisor = jTextField1.getText();
-        String departamentoEmisor = jComboBox1.getSelectedItem().toString();
-        String ciudadEmisor = jComboBox2.getSelectedItem().toString();
-
-        String nombreReceptor = jTextField2.getText();
-        String departamentoReceptor = jComboBox3.getSelectedItem().toString();
-        String ciudadReceptor = jComboBox4.getSelectedItem().toString();
-        float pesoPaquete = 0;
-
-        if(nombreEmisor.equals("") || departamentoEmisor.equals("") || ciudadEmisor.equals("") ||
-            nombreReceptor.equals("") || departamentoReceptor.equals("") || ciudadReceptor.equals("")){
-            JOptionPane.showMessageDialog(null, "Hay Campos vacios");
-            return;
-        }
-
-        try{
-            pesoPaquete = Float.parseFloat(jTextField3.getText());
-        }catch(Exception ex){
-            JOptionPane.showMessageDialog(null, "El campo peso no es numerico");
-            return;
-        }
-
-        Paquete paquete = new Paquete(nombreEmisor, departamentoEmisor, ciudadEmisor, nombreReceptor, departamentoReceptor, ciudadReceptor, pesoPaquete);
-        this.clienteRecepcion.registrarPaquete(paquete);
-        this.dispose();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
